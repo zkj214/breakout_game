@@ -22,10 +22,7 @@ class UI(Turtle):
         self.color(random.choice(COLOR_LIST))
         self.goto(0,0)
         self.write("B R E A K O U T",align="center",font=FONT)
-        self.color("white")
-        self.goto(0, -180)
-        self.write('Press Space Key to PAUSE the Game',
-                   align="center", font=('Calibri', 14, 'normal'))
+
 
     def declare_win(self):
         self.color("cyan")
@@ -36,6 +33,12 @@ class UI(Turtle):
         self.color("red")
         self.goto(0, -125)
         self.write("GAME OVER", align="center", font=FONT2)
+
+    def white_txt(self):
+        self.color("white")
+        self.goto(0, -180)
+        self.write('Press Space Key to PAUSE the Game',
+                   align="center", font=('Calibri', 14, 'normal'))
 
 
 

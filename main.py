@@ -41,6 +41,7 @@ def start_game():
             time.sleep(ball.speed_move)
 
             ball.move()
+            ui.white_txt()
 
             screen.listen()
             screen.onkey(paddle.move_left,"Left")
@@ -56,9 +57,9 @@ def start_game():
                 ball.speed_up()
 
             if ball.ycor() < -300:
-                game_is_on=False
                 ui.game_over()
                 scoreboard.save_high_score()
+                game_is_on=False
 
             if ball.distance(paddle) < 100 and ball.ycor() < -220:
                 ball.bounce_y()
